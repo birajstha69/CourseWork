@@ -200,3 +200,14 @@
     font-size: 14px;
     line-height: 1.4;
 }
+/* for copyright footer*/
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}

@@ -258,3 +258,13 @@
     display: block;
     margin-bottom: 10px;
 }
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}

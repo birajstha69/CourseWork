@@ -232,3 +232,14 @@ header p {
   color: var(--text-dark);
   transform: translateY(-3px);
 }
+/* for copyright footer*/
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
