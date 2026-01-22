@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*  Navbar */
 .navbar {
     display: flex;
@@ -57,7 +56,7 @@
 .icon:hover {
     color: #acdf71;
 }
-/* ===== New Product Image Slider ===== */
+/* New Product Image Slider */
 .slider {
     width: 350px;
     overflow: hidden;
@@ -168,7 +167,7 @@
 .footer-column a {
     color: white;
     text-decoration: none;
-=======
+}
 /*  Navbar */
 .navbar {
     display: flex;
@@ -338,5 +337,4 @@
 .footer-column a {
     color: white;
     text-decoration: none;
->>>>>>> f55222d (	new file:   Images/Bamboo Cutlery Set.jpg)
 }
