@@ -56,6 +56,36 @@
 .icon:hover {
     color: #acdf71;
 }
+/* ===== New Product Image Slider ===== */
+.slider {
+    width: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+}
+
+.slides img {
+    width: 350px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+/* Sliding Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+
+    38% { transform: translateX(-350px); }
+    66% { transform: translateX(-350px); }
+
+    71% { transform: translateX(-700px); }
+    100% { transform: translateX(-700px); }
+}
 /* shopnow */
 .shop-now-btn {
     display: inline-block;
