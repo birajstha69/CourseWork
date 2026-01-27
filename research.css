@@ -105,3 +105,110 @@ li {
   width: 100%;
   font-size: 14px;
 }
+/*  Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    position: relative;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #acdf71;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+.search-box {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+/* Section Containers */
+section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Table Styling */
+.research-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.research-table th, .research-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.research-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Conclusion specific styling */
+.conclusion {
+    border-left: 5px solid #28a745;
+    background-color: #f0fff4;
+}
+/* for copyright footer*/
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
