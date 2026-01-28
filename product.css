@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background-color: white; /* Changed from dark to white */
+    background-color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -43,7 +43,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #acdf71;
+    background-color: #3b9852;
     bottom: -5px;
     left: 0;
     transition: 0.3s;
@@ -54,7 +54,7 @@ body {
     width: 100%;
 }
 
-/* Nav Actions (Search + Icons) */
+/* Nav Actions */
 .nav-actions {
     display: flex;
     align-items: center;
@@ -176,7 +176,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Modal & X Button */
+
 .close {
     position: absolute;
     top: 15px;
