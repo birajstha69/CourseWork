@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vibrant Cart | EcoMart</title>
+    <link rel="stylesheet" href="product.css">
+    <style>
+        .cart-container {
+            padding: 40px 5%;
+            display: flex;
+            gap: 30px;
+        }
+
+        .cart-list-box {
+            flex: 2;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .summary-box {
+            flex: 1;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #febd69;
+            height: fit-content;
+        }
+
+        .delete-link {
+            color: #cc0c39;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            background: none;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="Images/EcomartLogo.jpg" height="50"></div>
+        <ul class="nav-links">
+            <li><a href="product.html">← Continue Shopping</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <div class="cart-list-box" id="cart-display">
+            <h2>Your Vibrant Cart</h2>
+            <hr style="margin: 20px 0;">
+        </div>
+        <div class="summary-box">
+            <h3>Subtotal (<span id="qty">0</span> items):</h3>
+            <p class="price" id="total" style="font-size: 28px;">Rs.0</p>
+            <button class="modal-cart-btn">Checkout Now</button>
+        </div>
+    </div>
+
+    <script>
+        function load() {
+            // Clean cart to ensure no NaN items show up
+            const cart = (JSON.parse(localStorage.getItem('ecoCart')) || []).filter(i => i.title && !isNaN(i.price));
+            const box = document.getElementById('cart-display');
+            let total = 0;
+
+            box.innerHTML = '<h2>Your Vibrant Cart</h2><hr style="margin: 20px 0;">';
+            if (cart.length === 0) box.innerHTML += "<p>Your cart is empty and waiting for vibrant items!</p>";
+
+            cart.forEach((item, i) => {
+                total += item.price;
+                box.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}">
+                        <div style="flex:1; padding-left:25px;">
+                            <h4 style="font-size: 18px;">${item.title}</h4>
+                            <p style="color: #007600; font-size: 13px;">In Stock & Ready to Ship</p>
+                            <button class="delete-link" onclick="del(${i})">Remove Item</button>
+                        </div>
+                        <p class="price">Rs.${item.price}</p>
+                    </div>`;
+            });
+            document.getElementById('total').innerText = "Rs." + total;
+            document.getElementById('qty').innerText = cart.length;
+        }
+
+        function del(i) {
+            let cart = JSON.parse(localStorage.getItem('ecoCart')) || [];
+            cart.splice(i, 1);
+            localStorage.setItem('ecoCart', JSON.stringify(cart));
+            load();
+        }
+        window.onload = load;
+    </script>
+</body>
+
+</html>

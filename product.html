@@ -1,185 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoMart</title>
+    <title>EcoMart | Sustainable Shopping</title>
     <link rel="stylesheet" href="product.css">
-    <!-- For Icons like account button or add to cart(shop) button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-        </style>
 </head>
+
 <body>
     <nav class="navbar">
-    <div class="logo">
-        <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
-    </div>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-        <input type="search" placeholder="Search" class="search-box">
-        <!-- Cart Icon -->
-        <a href="cart.html" class="icon cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-    </div>
-</nav>
-<hr>
-    <section class="product-header">
-    <div class="header-content">
-        <h1>Welcome to Our Product Collection</h1>
-        <p>Eco-friendly products for a sustainable lifestyle</p>
-
-        <div class="divider">
-            <span></span>
+        <div class="logo">
+            <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="60">
         </div>
-    </div>
-</section>
-<hr>
-    <section class="product-grid">
-        <div class="product-item"><img src="Images/BambooToothBrush.jpg" width="400" height="400" alt="1">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:20%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.1000</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+
+        <div class="nav-search-cart-container">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="main-search" onkeyup="filterProducts()"
+                    placeholder="Search vibrant eco-products..." class="search-box">
             </div>
-            <div class="product-Description">
+            <a href="cart.html" class="cart-btn-nav">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html" class="active">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="vibrant-header">
+        <h1>Welcome to EcoMart</h1>
+        <p>Live Sustainably, Shop Vibrantly.</p>
+    </header>
+
+    <div class="section-divider">
+        <h2 class="section-title">Our Products</h2>
+        <div class="vibrant-red-line"></div>
+    </div>
+
+    <main class="product-grid" id="product-grid">
+        <div class="product-item"
+            onclick="openModal('Bamboo Toothbrush', 'Rs.1000', 'Images/BambooToothBrush.jpg', 'Premium biodegradable bamboo toothbrushes with soft BPA-free bristles.')">
+            <div class="image-container">
+                <img src="Images/BambooToothBrush.jpg" alt="Toothbrush">
+                <div class="product-badge">20% OFF</div>
+            </div>
+            <div class="product-summary">
                 <h3>Bamboo Toothbrush</h3>
-                <p>Biodegradble bamboo toothbrushes with soft bristles, featuring a natural wood
-                    design with leaf engarvings. A sustainable alternative to plastic toothbrushes.
-                </p>
-                <p class="price"></p>
-            </div>
-        </div>
-        <div class="product-item"><img src="Images/Compostable Dish Scrub Sponge.jpg" width="400" height="400" alt="2">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:10%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.100</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-            <div class="product-Description">
-                <h3>Compostable Dish Scrub Sponge</h3>
-                <p>Compostable cleaning sponges made with sisal fiber scourer. Natural, plant
-                    based alternative to synthetic sponges.
-                </p>
-                <p class="price"></p>
-            </div>
-        </div>
-        <div class="product-item"><img src="Images/Reusable Stainless Steel Water Bottle.jpg" width="400" height="400" alt="3">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:10%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.300</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-            <div class="product-Description">
-                <h3>Reusable Water Bottle</h3>
-                <p>Forest green insulated stainless steel bottle with infinity logo. It
-                    keeps drik=nks hot or cold while eliminating disposable bottle waste.
-                </p>
-                <p class="price"></p>
+                <p class="price">Rs.1000</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Bamboo Toothbrush', 'Rs.1000', 'Images/BambooToothBrush.jpg')">Add to
+                    Cart</button>
             </div>
         </div>
 
-        <div class="product-item"><img src="Images/Reusable Cloth Paper Towels.jpg" width="400" height="400" alt="4">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:10%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.200</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+        <div class="product-item"
+            onclick="openModal('Dish Scrub Sponge', 'Rs.100', 'Images/Compostable Dish Scrub Sponge.jpg', 'Natural plant-based scrubbers for heavy-duty cleaning without plastic.')">
+            <div class="image-container">
+                <img src="Images/Compostable Dish Scrub Sponge.jpg" alt="Sponge">
+                <div class="product-badge">10% OFF</div>
             </div>
-            <div class="product-Description">
-                <h3>Reusable Cloth Paper Towels</h3>
-                <p>Washable cotton cloth towels that replaces disposable paper towels.
-                    Multipurpose and designed for hundreds of uses.
-                </p>
-                <p class="price"></p>
+            <div class="product-summary">
+                <h3>Dish Scrub Sponge</h3>
+                <p class="price">Rs.100</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Dish Scrub Sponge', 'Rs.100', 'Images/Compostable Dish Scrub Sponge.jpg')">Add
+                    to Cart</button>
             </div>
         </div>
-        <div class="product-item"><img src="Images/Solar-Powered Phone Charger.jpg" width="400" height="400" alt="5">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:25%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.5000</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+
+        <div class="product-item"
+            onclick="openModal('Reusable Water Bottle', 'Rs.300', 'Images/Reusable Stainless Steel Water Bottle.jpg', 'Insulated stainless steel bottle keeps drinks cold for 24 hours.')">
+            <div class="image-container">
+                <img src="Images/Reusable Stainless Steel Water Bottle.jpg" alt="Bottle">
+                <div class="product-badge">10% OFF</div>
             </div>
-            <div class="product-Description">
+            <div class="product-summary">
+                <h3>Reusable Water Bottle</h3>
+                <p class="price">Rs.300</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Reusable Water Bottle', 'Rs.300', 'Images/Reusable Stainless Steel Water Bottle.jpg')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-item"
+            onclick="openModal('Cloth Paper Towels', 'Rs.200', 'Images/Reusable Cloth Paper Towels.jpg', 'Washable cotton towels designed to replace hundreds of paper rolls.')">
+            <div class="image-container">
+                <img src="Images/Reusable Cloth Paper Towels.jpg" alt="Towels">
+                <div class="product-badge">10% OFF</div>
+            </div>
+            <div class="product-summary">
+                <h3>Cloth Paper Towels</h3>
+                <p class="price">Rs.200</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Cloth Paper Towels', 'Rs.200', 'Images/Reusable Cloth Paper Towels.jpg')">Add
+                    to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-item"
+            onclick="openModal('Portable Solar Charger', 'Rs.5000', 'Images/Solar-Powered Phone Charger.jpg', 'High-efficiency solar panel for clean power anywhere on Earth.')">
+            <div class="image-container">
+                <img src="Images/Solar-Powered Phone Charger.jpg" alt="Solar">
+                <div class="product-badge">25% OFF</div>
+            </div>
+            <div class="product-summary">
                 <h3>Portable Solar Charger</h3>
-                <p>Foldable solar pannel device for charging phones ands electronics using renewable
-                    solar energy. Includes carabines for outdoor use.
-                </p>
-                <p class="price"></p>
+                <p class="price">Rs.5000</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Portable Solar Charger', 'Rs.5000', 'Images/Solar-Powered Phone Charger.jpg')">Add
+                    to Cart</button>
             </div>
         </div>
-        <div class="product-item"><img src="Images/Reusable Produce Bags.jpg" width="400" height="400" alt="6">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:5%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.50</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+
+        <div class="product-item"
+            onclick="openModal('Reusable Grocery Bags', 'Rs.50', 'Images/Reusable Produce Bags.jpg', 'Durable cotton canvas bags for plastic-free shopping trips.')">
+            <div class="image-container">
+                <img src="Images/Reusable Produce Bags.jpg" alt="Bags">
+                <div class="product-badge">5% OFF</div>
             </div>
-            <div class="product-Description">
+            <div class="product-summary">
                 <h3>Reusable Grocery Bags</h3>
-                <p>Large canvas/cotton tote bags for shopping. Durable, washable, and designed to
-                    replace single use plastic bags.
-                </p>
-                <p class="price"></p>
+                <p class="price">Rs.50</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Reusable Grocery Bags', 'Rs.50', 'Images/Reusable Produce Bags.jpg')">Add
+                    to Cart</button>
             </div>
         </div>
-        <div class="product-item"><img src="Images/Bamboo Straws.jpg" width="400" height="400" alt="7">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:10%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.100</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+
+        <div class="product-item"
+            onclick="openModal('Bamboo Straws', 'Rs.100', 'Images/Bamboo Straws.jpg', 'Natural straws hand-cut from organic bamboo stalks.')">
+            <div class="image-container">
+                <img src="Images/Bamboo Straws.jpg" alt="Straws">
+                <div class="product-badge">10% OFF</div>
             </div>
-            <div class="product-Description">
+            <div class="product-summary">
                 <h3>Bamboo Straws</h3>
-                <p>Natural, reusable drinking straws made from bamboo. Biodegradable
-                    alternative to plastic straws.
-                </p>
-                <p class="price"></p>
+                <p class="price">Rs.100</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Bamboo Straws', 'Rs.100', 'Images/Bamboo Straws.jpg')">Add to
+                    Cart</button>
             </div>
         </div>
-        <div class="product-item"><img src="Images/Beeswax Food Wraps.jpg" width="400" height="400" alt="8">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:5%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.100</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+
+        <div class="product-item"
+            onclick="openModal('Beeswax Wraps', 'Rs.100', 'Images/Beeswax Food Wraps.jpg', 'Organic cotton infused with beeswax for sustainable food storage.')">
+            <div class="image-container">
+                <img src="Images/Beeswax Food Wraps.jpg" alt="Wraps">
+                <div class="product-badge">5% OFF</div>
             </div>
-            <div class="product-Description">
-                <h3>Beewax Wraps</h3>
-                <p>Reusable food wraps made with beewax coating. Replaces plastic wrap
-                    for storing food, featuring honeycomb pattern design.
-                </p>
-                <p class="price"></p>
+            <div class="product-summary">
+                <h3>Beeswax Wraps</h3>
+                <p class="price">Rs.100</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Beeswax Wraps', 'Rs.100', 'Images/Beeswax Food Wraps.jpg')">Add to
+                    Cart</button>
             </div>
         </div>
-        <div class="product-item"><img src="Images/Bamboo Cutlery Set.jpg" width="400" height="400" alt="9">
-            <div class="product-info">
-                <div class="product-badge"><strong>Discount:10%</strong></div>
-                <div class="product-quantity"><strong>Price:Rs.300</strong></div>
-                <button class="shop-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+
+        <div class="product-item"
+            onclick="openModal('Bamboo Utensil Set', 'Rs.300', 'Images/Bamboo Cutlery Set.jpg', 'Portable cutlery set in a recycled fabric roll for life on the go.')">
+            <div class="image-container">
+                <img src="Images/Bamboo Cutlery Set.jpg" alt="Cutlery">
+                <div class="product-badge">10% OFF</div>
             </div>
-            <div class="product-Description">
+            <div class="product-summary">
                 <h3>Bamboo Utensil Set</h3>
-                <p>Portable cutlery set in green fabric roll, includes bamboo fork
-                    , kinfe, sppon, chopsticks, and straw with cleaning brush.
-                </p>
-                <p class="price"></p>
+                <p class="price">Rs.300</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(event, 'Bamboo Utensil Set', 'Rs.300', 'Images/Bamboo Cutlery Set.jpg')">Add to
+                    Cart</button>
             </div>
         </div>
-    </section>
+    </main>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image"><img id="modalImg" src=""></div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalPrice" class="modal-price"></p>
+                    <hr>
+                    <h3>Product Details</h3>
+                    <p id="modalDesc"></p>
+                    <button class="modal-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
-  <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
-</footer>
- </body>
+        <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
