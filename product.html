@@ -10,32 +10,46 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="60">
-        </div>
+   <nav class="navbar">
+    <div class="logo">
+        <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
+    </div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html" class="active">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-        <div class="nav-search-cart-container">
-            <div class="search-wrapper">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" id="main-search" onkeyup="filterProducts()"
-                    placeholder="Search vibrant eco-products..." class="search-box">
-            </div>
-            <a href="cart.html" class="cart-btn-nav">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span id="cart-count">0</span>
-            </a>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html" class="active">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="nav-actions">
+        <input type="search" 
+               id="main-search" 
+               onkeyup="filterProducts()" 
+               placeholder="Search..." 
+               class="search-box">
+        
+        <a href="#" class="icon">
+            <i class="fa-regular fa-user"></i>
+        </a>
+        
+        <a href="cart.html" class="icon cart" style="position: relative;">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" style="
+                position: absolute;
+                top: -8px;
+                right: -10px;
+                background-color: #acdf71;
+                color: #355E3B;
+                font-size: 12px;
+                padding: 2px 5px;
+                border-radius: 50%;
+                font-weight: bold;">0</span>
+        </a>
+    </div>
+</nav>
 
     <header class="vibrant-header">
         <h1>Welcome to EcoMart</h1>

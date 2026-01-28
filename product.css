@@ -11,90 +11,72 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
-/* Vibrant Navbar */
+/* navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 4%;
-    background-color: #131921;
-    color: white;
+    padding: 15px 40px;
+    background-color: white; /* Changed from dark to white */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.nav-search-cart-container {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 6px;
-    flex: 1;
-    max-width: 500px;
-    margin: 0 20px;
-    border: 2px solid #febd69;
-}
-
-.search-wrapper {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    padding: 0 10px;
-    color: #555;
-}
-
-.search-box {
-    border: none;
-    outline: none;
-    padding: 12px;
-    width: 100%;
-    font-size: 15px;
-}
-
-.cart-btn-nav {
-    border-left: 1px solid #ddd;
-    padding: 10px 20px;
-    color: #131921;
-    font-size: 22px;
-    text-decoration: none;
-    position: relative;
-}
-
-#cart-count {
-    position: absolute;
-    top: 2px;
-    right: 8px;
-    background: #e44d26;
-    color: white;
-    font-size: 11px;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 18px;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: #fff;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    position: relative;
+    font-size: 16px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #acdf71;
+    bottom: -5px;
+    left: 0;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #febd69;
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
-.nav-links a.active {
-    color: #febd69;
-    text-decoration: underline;
+/* Nav Actions (Search + Icons) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.icon {
+    font-size: 20px;
+    color: #355E3B;
+    text-decoration: none;
+    position: relative;
+}
+
+.icon:hover {
+    color: #acdf71;
 }
 
 /* Vibrant Header */
