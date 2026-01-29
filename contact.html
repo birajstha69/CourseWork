@@ -47,10 +47,10 @@
         <div class="contact-container">
             <!-- Form -->
             <div class="contact-form">
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                <form onsubmit="return validateForm()">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -68,6 +68,7 @@
         </div>
         </div>
     </section>
+    <script src="contact.js"></script>
 <footer class="footer">
   <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
 </footer>

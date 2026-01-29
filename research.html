@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - EcoMart</title>
+    <title>Research</title>
     <link rel="stylesheet" href="research.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
-
-   <nav class="navbar">
-        <div class="logo">
-            <img src="Images/EcomartLogo.jpg" width="50px" height="50px" alt="EcoMart">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="product.html">PRODUCTS</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="research.html" class="active">RESEARCH</a></li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
+   <!-- Navbar-->
+    <nav class="navbar">
+    <div class="logo">
+        <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+        <input type="search" placeholder="Search" class="search-box">
+    </div>
+</nav>
+ <div class="container">
         <section class="hero-card">
             <h1>Web Component Analysis</h1>
             <h2>Comparative Research</h2>
@@ -100,7 +107,25 @@
                 </table>
             </div>
         </section>
-
+<hr>
+<!-- Section displaying screenshots of the watch brands' websites -->
+<section class="screenshots">
+    <div class="screenshot-container">
+        <div class="screenshot">
+            <img src="Images/AmazonHome.jpg" alt="Amazon" class="lightbox-trigger">
+            <p><a href="https://www.amazon.com/" class="brand-link">Amazon</a></p>
+        </div>
+        <div class="screenshot">
+            <img src="Images/EtsyHome.jpg" alt="Etsy" class="lightbox-trigger">
+            <p><a href="https://www.etsy.com/" class="brand-link">Etsy Shop</a></p>
+        </div>
+        <div class="screenshot">
+            <img src="Images/PatagoniaHome.jpg" alt="Patagonia" class="lightbox-trigger">
+            <p><a href="https://www.patagonia.com/home/" class="brand-link">Patagonia</a></p>
+        </div>
+    </div>
+</section>
+<hr>
         <section class="content-section">
             <h2 class="section-title">Key Findings</h2>
             <ul class="styled-list">
@@ -124,6 +149,5 @@
     <footer class="footer">
       <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>

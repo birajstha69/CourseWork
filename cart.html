@@ -70,11 +70,12 @@
         <div class="summary-box">
             <h3>Subtotal (<span id="qty">0</span> items):</h3>
             <p class="price" id="total" style="font-size: 28px;">Rs.0</p>
-            <button class="modal-cart-btn">Checkout Now</button>
+            <button class="modal-cart-btn" onclick="confirmRedirect()">Checkout Now</button>
         </div>
     </div>
 
     <script>
+        
         function load() {
             // Clean cart to ensure no NaN items show up
             const cart = (JSON.parse(localStorage.getItem('ecoCart')) || []).filter(i => i.title && !isNaN(i.price));
@@ -110,5 +111,4 @@
         window.onload = load;
     </script>
 </body>
-
 </html>

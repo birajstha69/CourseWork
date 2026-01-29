@@ -5,23 +5,43 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>lifestyle</title>
     <link rel="stylesheet" href="blog.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+</style>
 </head>
 <body>
-       <nav class="navbar">
-        <div class="logo">
-            <span class="logo-text">EcoMart</span>
-        </div>
-        
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="aboutus.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+      <!-- Navbar-->
+    <nav class="navbar">
+    <div class="logo">
+        <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+        <input type="search" placeholder="Search" class="search-box">
+    </div>
+</nav>
     <div class="category-bar">
+        <hr>
         <ul>
             <li><a href="blog.html">All</a></li>
             <li><a href="sustainability.html" class="cat-active">Sustainability</a></li>

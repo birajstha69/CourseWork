@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoMart Blog | Sustainable Living</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="blog.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+</style>
 </head>
 <body>
-
+    <!-- Navbar-->
     <nav class="navbar">
-        <div class="logo">
-            <span class="logo-text">EcoMart</span>
-        </div>
-        
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="aboutus.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="logo">
+        <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
+    </div>
 
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+        <input type="search" placeholder="Search" class="search-box">
+    </div>
+</nav>
     <header class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -31,7 +47,6 @@
             <p>Artists, inspiration, tips, and sustainable ideas</p>
         </div>
     </header>
-
     <div class="category-bar">
     <ul>
         <li><a href="blog.html" class="cat-active">All</a></li>
@@ -119,7 +134,7 @@
     </section>
 
     <footer class="footer">
-        <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
-    </footer>
+  <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
