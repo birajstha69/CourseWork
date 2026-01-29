@@ -13,7 +13,7 @@ function getSafeCart() {
 
 function addToCart(event, title, price, img) {
     if (event) event.stopPropagation();
-    const numericPrice = typeof price === 'string' ? parseInt(price.replace('Rs.', '')) : price;
+    const numericPrice = typeof price === 'string' ? parseInt(price.replace('Rs.', '')) : (typeof price === 'number' ? price : 0);
     const product = { title, price: numericPrice, image: img };
     let cart = getSafeCart();
     cart.push(product);
@@ -44,6 +44,7 @@ function updateCartBadge() {
  * ==================================================================================
  */
 function openModal(title, price, img, desc) {
+    if (document.getElementById('productModal').style.display === "block") return; // Prevent multiple openings
     document.getElementById('modalTitle').innerText = title;
     document.getElementById('modalPrice').innerText = price;
     document.getElementById('modalImg').src = img;
@@ -66,6 +67,10 @@ function closeModal() {
  */
 function filterProducts() {
     const searchInput = document.querySelector('.search-box').value.toLowerCase();
+    if (searchInput.trim() === '') { // Prevent empty search
+        alert('Please enter a search term.');
+        return;
+    }
     if (window.location.pathname.includes('product.html')) {
         const productItems = document.getElementsByClassName('product-item');
         for (let i = 0; i < productItems.length; i++) {
@@ -94,6 +99,7 @@ function validateForm() {
         return false;
     }
     alert("Form submitted successfully!");
+    document.getElementById('contact-form').submit(); // Ensure form is submitted
     return true;
 }
 
