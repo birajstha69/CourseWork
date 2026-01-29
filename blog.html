@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="blog.css">
+    <!-- For Icons like account button or add to cart(shop) button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
 * {
     margin: 0;
@@ -22,7 +25,7 @@ body {
 </style>
 </head>
 <body>
-    <!-- Navbar-->
+    <!-- Navbar - Universal -->
     <nav class="navbar">
     <div class="logo">
         <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
@@ -38,13 +41,21 @@ body {
     </ul>
     <div class="nav-actions">
         <input type="search" placeholder="Search" class="search-box">
+        <!-- Account Icon -->
+        <a href="contact.html" class="icon">
+            <i class="fa-regular fa-user"></i>
+        </a>
+        <!-- Cart Icon -->
+        <a href="cart.html" class="icon cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
     </div>
 </nav>
     <header class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>EcoMart Blog</h1>
-            <p>Artists, inspiration, tips, and sustainable ideas</p>
+            <p>Your source for inspiration, tips, and fresh ideas for a more sustainable life.</p>
         </div>
     </header>
     <div class="category-bar">
@@ -66,7 +77,7 @@ body {
                 </div>
                 <div class="card-content">
                     <h3>The EcoMart Vision</h3>
-                    <p>Technology isn't just about smartphones. We believe the most impactful technology reduces our environmental footprint while improving quality of life.</p>
+                    <p>We believe that the best technology is that which works in harmony with nature, not against it. Our vision is to champion innovations that not only enrich our lives but also protect our planet for generations to come.</p>
                 </div>
             </article>
 
@@ -76,9 +87,7 @@ body {
                 </div>
                 <div class="card-content">
                     <h3>Sustainable Daily Life</h3>
-                    <p><strong>Bamboo Toothbrushes:</strong> Eliminate 300 plastic brushes.<br>
-                    <strong>Bees Wrap:</strong> Replace cling film.<br>
-                    <strong>Natural Cleaning:</strong> Compostable sponges.</p>
+                    <p>Discover simple swaps that make a big difference. From bamboo toothbrushes to natural cleaning solutions, we'll show you how to make your daily routine more sustainable, one step at a time.</p>
                     <a href="sustainability.html" class="read-more">Read More &rarr;</a>
                 </div>
             </article>
@@ -89,7 +98,7 @@ body {
                 </div>
                 <div class="card-content">
                     <h3>Business Innovation</h3>
-                    <p>From solar charging portable tech to advanced insulation reducing plastic bottle usage, see how businesses are adapting.</p>
+                    <p>Sustainability is smart business. We're exploring how innovative companies are adapting to a changing world, from harnessing solar power to reducing plastic waste in their products.</p>
                     <a href="business.html" class="read-more">Read More &rarr;</a>
                 </div>
             </article>
@@ -100,7 +109,7 @@ body {
                 </div>
                 <div class="card-content">
                     <h3>Operations Impact</h3>
-                    <p>Supply chain efficiency through tracking, cost savings through durability, and building brand loyalty with values alignment.</p>
+                    <p>Every choice we make has an impact. We're taking a closer look at how sustainable practices can lead to a more efficient supply chain, more durable products, and a brighter future for us all.</p>
                     <a href="impact.html" class="read-more">See Impact &rarr;</a>
                 </div>
             </article>
@@ -111,11 +120,7 @@ body {
                 </div>
                 <div class="card-content">
                     <h3>Behind the Scenes</h3>
-                    <ul class="simple-list">
-                        <li>Material science improvements</li>
-                        <li>Design innovation</li>
-                        <li>Renewable energy production</li>
-                    </ul>
+                    <p>Ever wonder what goes into creating a truly sustainable product? We're pulling back the curtain to show you the science, innovation, and passion that drives our work.</p>
                     <a href="technology.html" class="read-more">Learn More &rarr;</a>
                 </div>
             </article>
@@ -126,7 +131,7 @@ body {
                 </div>
                 <div class="card-content">
                     <h3>Challenges & Ops</h3>
-                    <p>Bridging the awareness gap through marketing and scaling production without compromising environmental standards.</p>
+                    <p>The future is green, but getting there isn't always easy. We're taking an honest look at the challenges and opportunities that lie ahead on the path to a more sustainable world.</p>
                 </div>
             </article>
 
@@ -136,5 +141,6 @@ body {
     <footer class="footer">
   <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>

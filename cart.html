@@ -3,86 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Vibrant Cart | EcoMart</title>
-    <link rel="stylesheet" href="product.css">
-    <style>
-        .cart-container {
-            padding: 40px 5%;
-            display: flex;
-            gap: 30px;
-        }
-
-        .cart-list-box {
-            flex: 2;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .cart-item {
-            display: flex;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .cart-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-
-        .summary-box {
-            flex: 1;
-            background: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            border: 2px solid #febd69;
-            height: fit-content;
-        }
-
-        .delete-link {
-            color: #cc0c39;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: bold;
-            background: none;
-            border: none;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Cart | EcoMart</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="logo"><img src="Images/EcomartLogo.jpg" height="50"></div>
+        <div class="logo">
+            <a href="index.html"><img src="Images/EcomartLogo.jpg" alt="EcoMart Logo"></a>
+        </div>
         <ul class="nav-links">
-            <li><a href="product.html">← Continue Shopping</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="nav-actions">
+            <input type="search" placeholder="Search" class="search-box">
+            <a href="contact.html" class="icon"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="icon cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
     </nav>
 
     <div class="cart-container">
-        <div class="cart-list-box" id="cart-display">
-            <h2>Your Vibrant Cart</h2>
-            <hr style="margin: 20px 0;">
+        <div class="cart-items-column" id="cart-display">
+            <h2>Your Cart</h2>
         </div>
-        <div class="summary-box">
-            <h3>Subtotal (<span id="qty">0</span> items):</h3>
-            <p class="price" id="total" style="font-size: 28px;">Rs.0</p>
-            <button class="modal-cart-btn" onclick="confirmRedirect()">Checkout Now</button>
+        <div class="summary-column">
+            <h3>Order Summary</h3>
+            <p>Subtotal (<span id="qty">0</span> items):</p>
+            <p class="summary-total" id="total">Rs.0</p>
+            <button class="checkout-btn" onclick="confirmRedirect()">Proceed to Checkout</button>
         </div>
     </div>
 
     <script>
         
+        function confirmRedirect() {
+            window.location.href = 'checkout.html';
+        }
+
         function load() {
-            // Clean cart to ensure no NaN items show up
+
             const cart = (JSON.parse(localStorage.getItem('ecoCart')) || []).filter(i => i.title && !isNaN(i.price));
             const box = document.getElementById('cart-display');
             let total = 0;
 
-            box.innerHTML = '<h2>Your Vibrant Cart</h2><hr style="margin: 20px 0;">';
+            box.innerHTML = '<h2>Your Cart</h2>';
             if (cart.length === 0) box.innerHTML += "<p>Your cart is empty and waiting for vibrant items!</p>";
 
             cart.forEach((item, i) => {
@@ -90,10 +61,9 @@
                 box.innerHTML += `
                     <div class="cart-item">
                         <img src="${item.image}">
-                        <div style="flex:1; padding-left:25px;">
-                            <h4 style="font-size: 18px;">${item.title}</h4>
-                            <p style="color: #007600; font-size: 13px;">In Stock & Ready to Ship</p>
-                            <button class="delete-link" onclick="del(${i})">Remove Item</button>
+                        <div class="item-details">
+                            <h4>${item.title}</h4>
+                            <button class="remove-btn" onclick="del(${i})">Remove</button>
                         </div>
                         <p class="price">Rs.${item.price}</p>
                     </div>`;

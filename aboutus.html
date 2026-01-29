@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="aboutus.css">
+    <!-- For Icons like account button or add to cart(shop) button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -21,7 +24,7 @@
     </style>
 </head>
 <body>
-   <!-- Navbar-->
+   <!-- Navbar - Universal -->
     <nav class="navbar">
     <div class="logo">
         <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
@@ -37,6 +40,14 @@
     </ul>
     <div class="nav-actions">
         <input type="search" placeholder="Search" class="search-box">
+        <!-- Account Icon -->
+        <a href="contact.html" class="icon">
+            <i class="fa-regular fa-user"></i>
+        </a>
+        <!-- Cart Icon -->
+        <a href="cart.html" class="icon cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
     </div>
 </nav>
       <div class="team-mem">
@@ -136,5 +147,6 @@
     <footer class="footer">
   <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>

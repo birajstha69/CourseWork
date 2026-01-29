@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="contact.css">
     <!-- For Icons like account button or add to cart(shop) button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -17,7 +18,7 @@
 </head>
 <body>
     <div class="page-wrapper">
-   <!-- Navbar-->
+   <!-- Navbar - Universal -->
     <nav class="navbar">
     <div class="logo">
         <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
@@ -32,43 +33,45 @@
     </ul>
     <div class="nav-actions">
         <input type="search" placeholder="Search" class="search-box">
-    <!-- Account Icon -->
-        <a href="login.html" class="icon">
+        <!-- Account Icon -->
+        <a href="contact.html" class="icon">
             <i class="fa-regular fa-user"></i>
+        </a>
+        <!-- Cart Icon -->
+        <a href="cart.html" class="icon cart">
+            <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
 </nav>
-<!-- contact -->
-    <section class="contact">
-        <div class="contact-header">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you. Get in touch with EcoMart.</p>
-        </div>
-        <div class="contact-container">
-            <!-- Form -->
+<!-- Contact Section - Contact -->
+    <section class="contact-section">
+        <div class="contact-card">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Get in touch with EcoMart.</p>
+                <ul class="info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Itahari, Nepal</li>
+                    <li><i class="fa-solid fa-envelope"></i> support@ecomart.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +977-9704567890</li>
+                </ul>
+            </div>
             <div class="contact-form">
                 <form onsubmit="return validateForm()">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
+                    </div>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-            <!-- our info -->
-            <div class="contact-info">
-                <h2>Get in touch</h2>
-                <p>Have questions about our eco-friendly products or services? Reach out to us anytime.</p>
-                <ul>
-                    <li><strong>Address:</strong> Itahari, Nepal</li>
-                    <li><strong>Email:</strong> support@woodbrush</li>
-                    <li><strong>Phone:</strong> +977-9704567890</li>
-                    <li><strong>Working Hours:</strong> Sun–Fri, 9AM–6PM</li>
-                </ul>
-            </div>
-        </div>
         </div>
     </section>
-    <script src="contact.js"></script>
+    <script src="main.js"></script>
 <footer class="footer">
   <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
 </footer>

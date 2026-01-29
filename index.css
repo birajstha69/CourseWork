@@ -1,62 +1,4 @@
-/*  Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    position: relative;
-}
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #acdf71;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-.nav-links a:hover::after {
-    width: 100%;
-}
-/* icons */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.search-box {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
-
-.icon {
-    font-size: 20px;
-    color: #355E3B;
-    text-decoration: none;
-    position: relative;
-}
-
-.icon:hover {
-    color: #acdf71;
-}
-/* Featured Section */
+/* Featured Section - Index */
 .featured {
     padding: 80px 20px;
     background: linear-gradient(135deg, #e9f5ec, #f7faf8);
@@ -71,7 +13,7 @@
     flex-wrap: wrap;
 }
 
-/* Slider Card */
+/* Slider Card - Index */
 .slider-box {
     background: rgba(255,255,255,0.75);
     backdrop-filter: blur(10px);
@@ -80,7 +22,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Slider */
+/* Slider - Index */
 .slider {
     width: 360px;
     height: 360px;
@@ -103,14 +45,14 @@
     transition: transform 0.5s ease;
 }
 
-/* Slider animation */
+/* Slider Animation - Index */
 @keyframes slide {
     0%, 30%   { transform: translateX(0); }
     35%, 65%  { transform: translateX(-360px); }
     70%, 100% { transform: translateX(-720px); }
 }
 
-/* Content */
+/* Content - Index */
 .content {
     max-width: 450px;
 }
@@ -128,7 +70,7 @@
     color: #555;
 }
 
-/* Button */
+/* Button - Index */
 .confirm-btn {
     margin-top: 25px;
     padding: 14px 45px;
@@ -148,116 +90,8 @@
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 12px 30px rgba(53,94,59,0.4);
 }
-.footer {
-    background-color: black;
-    color: white;
-    padding: 50px 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.footer-column {
-    max-width: 300px;
-}
 
-.footer-column h3 {
-    color: goldenrod;
-}
-
-.footer-column a {
-    color: white;
-    text-decoration: none;
-}
-/*  Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    position: relative;
-}
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #acdf71;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-.nav-links a:hover::after {
-    width: 100%;
-}
-/* icons */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.search-box {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
-
-.icon {
-    font-size: 20px;
-    color: #355E3B;
-    text-decoration: none;
-    position: relative;
-}
-
-.icon:hover {
-    color: #acdf71;
-}
-/*  New Product Image Slider */
-.slider {
-    width: 350px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    animation: slide 9s infinite;
-}
-
-.slides img {
-    width: 350px;
-    flex-shrink: 0;
-    border-radius: 10px;
-}
-
-/* Sliding Animation */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(0); }
-
-    38% { transform: translateX(-350px); }
-    66% { transform: translateX(-350px); }
-
-    71% { transform: translateX(-700px); }
-    100% { transform: translateX(-700px); }
-}
-/* shopnow */
+/* Shop Now Button - Index */
 .shop-now-btn {
     display: inline-block;
     padding: 15px 45px;
@@ -271,71 +105,6 @@
 }
 
 .shop-now-btn:hover {
-    background-color: #355E3B;
-    color: white;
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-.featured {
-    padding: 60px 20px;
-    background-color: #f5f5f5;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.container img {
-    width: 350px;
-    border-radius: 10px;
-}
-
-.content h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.content p {
-    line-height: 1.6;
-}
-
-.confirm-btn {
-    margin-top: 20px;
-    padding: 12px 35px;
-    border-radius: 30px;
-    border: none;
-    background-color: #355E3B;
-    color: white;
-    cursor: pointer;
-}
-
-.confirm-btn:hover {
-    background-color: #2c4d31;
-}
-.footer {
-    background-color: black;
-    color: white;
-    padding: 50px 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.footer-column {
-    max-width: 300px;
-}
-
-.footer-column h3 {
-    color: goldenrod;
-}
-
-.footer-column a {
-    color: white;
-    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }

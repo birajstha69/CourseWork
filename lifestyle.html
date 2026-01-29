@@ -2,71 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>lifestyle</title>
-    <link rel="stylesheet" href="blog.css">
-    <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.8;
-    overflow-x: hidden;
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Lifestyle | EcoMart Blog</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="blog-single.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-      <!-- Navbar-->
     <nav class="navbar">
-    <div class="logo">
-        <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
-    </div>
+        <div class="logo">
+            <a href="index.html"><img src="Images/EcomartLogo.jpg" alt="EcoMart Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <input type="search" placeholder="Search" class="search-box">
+            <a href="contact.html" class="icon"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="icon cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </nav>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-        <input type="search" placeholder="Search" class="search-box">
-    </div>
-</nav>
     <div class="category-bar">
-        <hr>
         <ul>
             <li><a href="blog.html">All</a></li>
-            <li><a href="sustainability.html" class="cat-active">Sustainability</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
             <li><a href="technology.html">Technology</a></li>
-            <li><a href="lifestyle.html">Lifestyle</a></li>
+            <li><a href="lifestyle.html" class="cat-active">Lifestyle</a></li>
             <li><a href="business.html">Business</a></li>
             <li><a href="impact.html">Impact</a></li>
         </ul>
     </div>
-    <article class="article-container">
-    <header class="article-header">
-        <h1>Sustainable Lifestyle: The Power of Small Habits</h1>
-        <p>How individual choices ripple across the global ecosystem</p>
-    </header>
 
-    <section class="article-body">
-        <h2>The "Zero-Waste" Journey</h2>
-        <p>Living a sustainable lifestyle is not about perfection; it is about millions of people doing it imperfectly. The modern household is the front line of environmental change. We focus on "high-impact swaps." For example, the average person uses 150 plastic water bottles a year. By switching to a single vacuum-insulated stainless steel bottle, a family of four prevents 600 bottles from entering the ocean annually.</p>
+    <div class="article-container">
+        <div class="article-header">
+            <h1>Sustainable Lifestyle: The Power of Small Habits</h1>
+            <p>Discover how small, everyday choices can create a ripple effect of positive change for our planet.</p>
+        </div>
+        <div class="article-content">
+            <h2>The "Zero-Waste" Journey</h2>
+            <p>Going green doesn't have to be overwhelming. We believe that a sustainable lifestyle is built on small, imperfect actions taken by millions of people. We'll show you how simple swaps, like switching to a reusable water bottle, can have a huge collective impact on our planet.</p>
 
-        <h2>Sustainable Food Habits</h2>
-        <p>Food storage is one of the largest sources of domestic plastic waste. The technology behind <strong>Bees Wrap</strong> (organic cotton infused with jojoba oil and resin) represents a return to traditional wisdom enhanced by modern standards. It allows food to "breathe" unlike plastic, which traps moisture and accelerates rot. This transition reduces food waste—another massive contributor to methane emissions in landfills.</p>
-        
-        <h2>Ethical Minimalism</h2>
-        <p>Lifestyle sustainability also means buying less but buying better. We advocate for products with "Lifetime Utility." When a product is designed to last 10 years instead of 10 months, the carbon cost of manufacturing is spread across a decade, drastically reducing the net impact per use.</p>
-    </section>
-</article>
+            <h2>Sustainable Food Habits</h2>
+            <p>Did you know that the way you store your food can have a big impact on the environment? We're exploring how simple, natural solutions like Bees Wrap can help you reduce plastic waste, keep your food fresh for longer, and even save you money.</p>
+            
+            <h2>Ethical Minimalism</h2>
+            <p>In a world of fast fashion and disposable products, we believe in the power of buying less, but buying better. We're celebrating the beauty of products that are built to last, and exploring how conscious consumerism can help us create a more sustainable future.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>About EcoMart</h3>
+            <p>EcoMart is dedicated to promoting sustainability by offering eco-friendly products that reduce environmental impact.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: luffysharma067@gmail.com</p>
+            <p>Phone: +977 982064879</p>
+            <p>Itahari, Nepal</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>

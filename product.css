@@ -1,65 +1,6 @@
-/*  Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    position: relative;
-}
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #acdf71;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-.nav-links a:hover::after {
-    width: 100%;
-}
 
-/* Nav Actions */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
 
-.search-box {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-.icon {
-    font-size: 20px;
-    color: #355E3B;
-    text-decoration: none;
-    position: relative;
-}
-
-.icon:hover {
-    color: #acdf71;
-}
-
-/* Vibrant Header */
+/* Vibrant Header - Product */
 .vibrant-header {
     text-align: center;
     padding: 50px 20px;
@@ -72,7 +13,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Foitouts Divider */
+/* Section Divider - Product */
 .section-divider {
     padding: 30px 4% 10px;
 }
@@ -91,7 +32,7 @@
     margin-top: 5px;
 }
 
-/* Product Cards */
+/* Product Grid - Product */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

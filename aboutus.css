@@ -1,44 +1,5 @@
-/*  Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    position: relative;
-    font-family: Arial, sans-serif;
-}
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #acdf71;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-.nav-links a:hover::after {
-    width: 100%;
-}
-.search-box {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
+
+/* Variables - About Us */
 :root {
   --primary-color: #a78bfa;
   --primary-dark: #8b5cf6;
@@ -232,7 +193,7 @@ header p {
   color: var(--text-dark);
   transform: translateY(-3px);
 }
-/* for copyright footer*/
+/* Footer - About Us */
 .footer {
   background-color: #222;
   color: #ffffff;
