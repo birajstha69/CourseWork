@@ -6,7 +6,6 @@
     <title>About Us</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="aboutus.css">
-    <!-- For Icons like account button or add to cart(shop) button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link
       rel="stylesheet"
@@ -24,8 +23,7 @@
     </style>
 </head>
 <body>
-   <!-- Navbar - Universal -->
-    <nav class="navbar">
+   <nav class="navbar">
     <div class="logo">
         <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
     </div>
@@ -40,101 +38,127 @@
     </ul>
     <div class="nav-actions">
         <input type="search" placeholder="Search" class="search-box">
-        <!-- Account Icon -->
         <span class="icon"><i class="fa-regular fa-user"></i></span>
-        <!-- Cart Icon -->
         <a href="cart.html" class="icon cart">
             <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" style="font-size: 0.8rem; vertical-align: top;">0</span>
         </a>
     </div>
 </nav>
+
 <div class="team-mem">
   <header>
       <h1>Meet Our Team</h1>
       <p>We're a passionate group of professionals dedicated to delivering exceptional results.</p>
   </header>
   <div class="team-grid">
-      <!-- TEAM MEMBER 1 -->
-      <div class="team-card">
+      <div class="team-card" data-member-id="0" onclick="openPortfolio(this)">
           <div class="card-top">
               <div class="profile-bg"></div>
               <div class="profile-img">
                   <img src="Images/Biraj.jpg" alt="Biraj Shrestha" />
               </div>
               <h3>Biraj Shrestha</h3>
-              <p class="role">Team Leader & Home Page Designer</p>
+              <p class="role">Team Leader</p>
           </div>
           <div class="card-bottom">
               <p class="bio">Student of Itahari International College, passed +2 exam with 3.3 GPA.</p>
               <div class="social-links">
-                  <a href="https://www.facebook.com/hanxomkto.mah.184" class="social-icon"><i class="fab fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/birajstha61/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                  <a href="https://github.com/birajstha69" class="social-icon"><i class="fab fa-github"></i></a>
+                  <a href="https://www.facebook.com/hanxomkto.mah.184" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/birajstha61/" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
+                  <a href="https://github.com/birajstha69" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
               </div>
           </div>
       </div>
 
-      <!-- TEAM MEMBER 2 -->
-      <div class="team-card">
+      <div class="team-card" data-member-id="1" onclick="openPortfolio(this)">
           <div class="card-top">
               <div class="profile-bg"></div>
               <div class="profile-img">
                   <img src="Images/Divyamani Khawas.jpg" alt="Divyamani Khawas" />
               </div>
               <h3>Divyamani Khawas</h3>
-              <p class="role">Products & Blog Page Designer</p>
+              <p class="role">Member 1</p>
           </div>
           <div class="card-bottom">
               <p class="bio">Student of Itahari International College, passed +2 exam with 3.12 GPA with great Front-end development skill.</p>
               <div class="social-links">
-                  <a href="https://www.linkedin.com/in/divyamani-khawas-13216538a" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="https://github.com/Time-Emperor" class="social-icon"><i class="fab fa-github"></i></a>
-                  <a href="https://www.instagram.com/khawasdivyamani" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/divyamani-khawas-13216538a" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://github.com/Time-Emperor" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+                  <a href="https://www.instagram.com/khawasdivyamani" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
               </div>
           </div>
       </div>
 
-      <!-- TEAM MEMBER 3 -->
-      <div class="team-card">
+      <div class="team-card" data-member-id="2" onclick="openPortfolio(this)">
           <div class="card-top">
               <div class="profile-bg"></div>
               <div class="profile-img">
                   <img src="Images/Sanam Limbu.jpg" alt="Sanam Kurumbang" />
               </div>
               <h3>Sanam Kurumbang</h3>
-              <p class="role">Research Page Designer</p>
+              <p class="role">Member 2</p>
           </div>
           <div class="card-bottom">
               <p class="bio">Student of Itahari International College, passed +2 exam with 2.9 GPA.</p>
               <div class="social-links">
-                  <a href="https://www.facebook.com/sonam.limbu.211145" class="social-icon"><i class="fab fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/sonam200343/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/sonam.limbu.211145" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/sonam200343/" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
               </div>
           </div>
       </div>
 
-      <!-- TEAM MEMBER 4 -->
-      <div class="team-card">
+      <div class="team-card" data-member-id="3" onclick="openPortfolio(this)">
           <div class="card-top">
               <div class="profile-bg"></div>
               <div class="profile-img">
                   <img src="Images/Mik.jpg" alt="Mik Limbu" />
               </div>
               <h3>Mik Limbu</h3>
-              <p class="role">Contact Page Designer</p>
+              <p class="role">Member 3</p>
           </div>
           <div class="card-bottom">
               <p class="bio">Student of Itahari International College, passed +2 exam with 3.1 GPA.</p>
               <div class="social-links">
-                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                  <a href="https://github.com/miklimbu25-sudo/coursework" class="social-icon"><i class="fab fa-github"></i></a>
-                  <a href="https://www.instagram.com/soyegon/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/miklimbu.miklimbu" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-facebook"></i></a>
+                  <a href="https://github.com/miklimbu25-sudo/coursework" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+                  <a href="https://www.instagram.com/soyegon/" class="social-icon" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
               </div>
           </div>
       </div>
   </div>
 </div>
-    <footer class="footer">
+
+<div id="portfolio-modal" class="portfolio-modal-overlay">
+    <div class="portfolio-modal-content">
+        <span class="close-portfolio-btn" onclick="closePortfolio()">&times;</span>
+        
+        <div class="portfolio-header">
+            <img id="pf-modal-img" src="" alt="Profile Image">
+            <h2 id="pf-modal-name">Member Name</h2>
+            <p id="pf-modal-role" class="role">Member Role</p>
+        </div>
+        
+        <div class="portfolio-body">
+            <h3>About & Experience</h3>
+            <p id="pf-modal-desc">Detailed portfolio description...</p>
+            
+            <div class="portfolio-section">
+                <h3>Key Skills</h3>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                    <li>UI/UX Design Principles</li>
+                    <li>Responsive Web Design</li>
+                    <li>Web Frame Designer</li>
+                    <li>Version Control (Git/GitHub)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
   <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
 </footer>
 <script src="main.js"></script>
