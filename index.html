@@ -5,7 +5,6 @@
     <meta name="description" content="EcoMart - Sustainable Products for a Greener Future">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoMart</title>
-    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="index.css">
     <!-- For Icons like account button or add to cart(shop) button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -38,7 +37,7 @@
     </style>
 </head>
 <body>
-<!-- Navbar - Universal -->
+<!-- Navbar  -->
 <nav class="navbar">
     <div class="logo">
         <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
@@ -54,14 +53,16 @@
     <div class="nav-actions">
         <input type="search" placeholder="Search" class="search-box">
         <!-- Account Icon -->
-        <span class="icon"><i class="fa-regular fa-user"></i></span>
+        <a href="#" class="icon">
+            <i class="fa-regular fa-user"></i>
+        </a>
         <!-- Cart Icon -->
         <a href="cart.html" class="icon cart">
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
 </nav>
-<!-- Hero Section - Index -->
+<!-- Welcome Message -->
 <section class="hero">
     <div>
         <h1>Welcome to EcoMart</h1>
@@ -74,7 +75,7 @@
         </a>
     </div>
 </section>
-<!-- Featured Section - Index -->
+<!-- New product -->
 <section class="featured">
     <div class="container">
         <div class="slider-box">
@@ -92,13 +93,13 @@
                 Discover the perfect blend of sustainability, craftsmanship,
                 and modern design in our thoughtfully curated collection.
             </p>
-            <button class="confirm-btn" onclick="exploreProductsRedirect()">
+            <button class="confirm-btn" onclick="confirmRedirect()">
                 Explore Products
             </button>
         </div>
     </div>
 </section>
-<!-- Footer - Universal -->
+<!--  Footer -->
 <footer class="footer">
     <div class="footer-column">
         <h3>About EcoMart</h3>
@@ -107,7 +108,6 @@
             eco-friendly products that reduce environmental impact.
         </p>
     </div>
-
     <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
@@ -124,6 +124,12 @@
         <p>Itahari, Nepal</p>
     </div>
 </footer>
-<script src="main.js"></script>
+<script>
+    function confirmRedirect() {
+        if (confirm("Do you want to explore our eco-friendly products?")) {
+            window.location.href = "product.html";
+        }
+    }
+</script>
 </body>
 </html>

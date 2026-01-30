@@ -1,9 +1,116 @@
-/* Featured Section - Index */
+/*  Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    position: relative;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #acdf71;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+/* icons */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.search-box {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+.icon {
+    font-size: 20px;
+    color: #355E3B;
+    text-decoration: none;
+    position: relative;
+}
+.icon:hover {
+    color: #acdf71;
+}
+/* shopnow */
+.shop-now-btn {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #acdf71;
+    color: #355E3B;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.shop-now-btn:hover {
+    background-color: #355E3B;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+.featured {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container img {
+    width: 350px;
+    border-radius: 10px;
+}
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.content p {
+    line-height: 1.6;
+}
+.confirm-btn {
+    margin-top: 20px;
+    padding: 12px 35px;
+    border-radius: 30px;
+    border: none;
+    background-color: #355E3B;
+    color: white;
+    cursor: pointer;
+}
+.confirm-btn:hover {
+    background-color: #2c4d31;
+}
+/* Featured Section */
 .featured {
     padding: 80px 20px;
     background: linear-gradient(135deg, #e9f5ec, #f7faf8);
 }
-
 .container {
     max-width: 1100px;
     margin: auto;
@@ -12,8 +119,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
-
-/* Slider Card - Index */
+/* Slider Card */
 .slider-box {
     background: rgba(255,255,255,0.75);
     backdrop-filter: blur(10px);
@@ -21,21 +127,18 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-
-/* Slider - Index */
+/* Slider */
 .slider {
     width: 360px;
     height: 360px;
     overflow: hidden;
     border-radius: 15px;
 }
-
 .slides {
     display: flex;
     width: 300%;
     animation: slide 10s infinite;
 }
-
 .slides img {
     width: 360px;
     height: 360px;
@@ -44,33 +147,28 @@
     border-radius: 15px;
     transition: transform 0.5s ease;
 }
-
-/* Slider Animation - Index */
+/* Slider animation */
 @keyframes slide {
     0%, 30%   { transform: translateX(0); }
     35%, 65%  { transform: translateX(-360px); }
     70%, 100% { transform: translateX(-720px); }
 }
-
-/* Content - Index */
+/* Content */
 .content {
     max-width: 450px;
 }
-
 .content h2 {
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 15px;
     color: #1f3d2b;
 }
-
 .content p {
     font-size: 17px;
     line-height: 1.7;
     color: #555;
 }
-
-/* Button - Index */
+/* Button */
 .confirm-btn {
     margin-top: 25px;
     padding: 14px 45px;
@@ -85,26 +183,26 @@
     transition: 0.3s;
     box-shadow: 0 8px 20px rgba(53,94,59,0.3);
 }
-
 .confirm-btn:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 12px 30px rgba(53,94,59,0.4);
 }
-
-/* Shop Now Button - Index */
-.shop-now-btn {
-    display: inline-block;
-    padding: 15px 45px;
-    background-color: #acdf71;
-    color: #355E3B;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
+.footer {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
 }
-
-.shop-now-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.footer-column {
+    max-width: 300px;
+}
+.footer-column h3 {
+    color: goldenrod;
+}
+.footer-column a {
+    color: white;
+    text-decoration: none;
 }

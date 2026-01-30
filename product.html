@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoMart | Sustainable Shopping</title>
-    <link rel="stylesheet" href="base.css">
+    <title>Products</title>
     <link rel="stylesheet" href="product.css">
+    <!-- For Icons like account button or add to cart(shop) button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Internal CSS -->
     <style>
         * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family:  Arial, sans-serif;
     background-color: #f0f2f5;
@@ -23,14 +22,12 @@ body {
 }   
     </style>
 </head>
-
 <body>
-   <!-- Navbar - Universal -->
+    <!-- Navbar -->
    <nav class="navbar">
     <div class="logo">
         <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
     </div>
-    
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="product.html" class="active">Products</a></li>
@@ -39,15 +36,12 @@ body {
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-
     <div class="nav-actions">
         <input type="search" 
                id="main-search" 
                onkeyup="filterProducts()" 
-               placeholder="Search..." 
+               placeholder="Search" 
                class="search-box">
-        
-        <span class="icon"><i class="fa-regular fa-user"></i></span>
         <a href="cart.html" class="icon cart" style="position: relative;">
             <i class="fa-solid fa-cart-shopping"></i>
             <span id="cart-count" style="
@@ -63,17 +57,15 @@ body {
         </a>
     </div>
 </nav>
-
+<!-- Our Products -->
     <header class="vibrant-header">
         <h1>Welcome to EcoMart</h1>
         <p>Live Sustainably, Shop Vibrantly.</p>
     </header>
-
     <div class="section-divider">
         <h2 class="section-title">Our Products</h2>
         <div class="vibrant-red-line"></div>
     </div>
-
     <main class="product-grid" id="product-grid">
         <div class="product-item"
             onclick="openModal('Bamboo Toothbrush', 'Rs.1000', 'Images/BambooToothBrush.jpg', 'Premium biodegradable bamboo toothbrushes with soft BPA-free bristles.')">
@@ -85,8 +77,8 @@ body {
                 <h3>Bamboo Toothbrush</h3>
                 <p class="price">Rs.1000</p>
                 <button class="add-to-cart-btn"
-                    onclick="addToCart(event, 'Bamboo Toothbrush', 'Rs.1000', 'Images/BambooToothBrush.jpg')">Add to
-                    Cart</button>
+                    onclick="addToCart(event, 'Bamboo Toothbrush', 'Rs.1000', 'Images/BambooToothBrush.jpg')">Add to Cart
+                </button>
             </div>
         </div>
 
@@ -104,7 +96,6 @@ body {
                     to Cart</button>
             </div>
         </div>
-
         <div class="product-item"
             onclick="openModal('Reusable Water Bottle', 'Rs.300', 'Images/Reusable Stainless Steel Water Bottle.jpg', 'Insulated stainless steel bottle keeps drinks cold for 24 hours.')">
             <div class="image-container">
@@ -210,7 +201,6 @@ body {
             </div>
         </div>
     </main>
-
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -227,12 +217,11 @@ body {
             </div>
         </div>
     </div>
-
+    <section>
     <footer class="footer">
         <p>© 2026 EcoMart by Biraj Shrestha, Divyamani khawas, Sanam Kurumbang & Mik Limbu. All Rights Reserved.</p>
     </footer>
-
-    <script src="main.js"></script>
+    </section>
+    <script src="product.js"></script>
 </body>
-
 </html>

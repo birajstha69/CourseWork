@@ -3,76 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Measuring Our Impact | EcoMart Blog</title>
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="blog-single.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>impact</title>
+    <link rel="stylesheet" href="blog.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+</style>
 </head>
 <body>
+      <!-- Navbar-->
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="Images/EcomartLogo.jpg" alt="EcoMart Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-            <input type="search" placeholder="Search" class="search-box">
-            <a href="contact.html" class="icon"><i class="fa-regular fa-user"></i></a>
-            <a href="cart.html" class="icon cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-    </nav>
+    <div class="logo">
+        <img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70">
+    </div>
 
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+        <input type="search" placeholder="Search" class="search-box">
+    </div>
+</nav>
     <div class="category-bar">
+        <hr>
         <ul>
             <li><a href="blog.html">All</a></li>
-            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="sustainability.html" class="cat-active">Sustainability</a></li>
             <li><a href="technology.html">Technology</a></li>
             <li><a href="lifestyle.html">Lifestyle</a></li>
             <li><a href="business.html">Business</a></li>
-            <li><a href="impact.html" class="cat-active">Impact</a></li>
+            <li><a href="impact.html">Impact</a></li>
         </ul>
     </div>
+    <article class="article-container">
+    <header class="article-header">
+        <h1>Measuring Our Impact</h1>
+        <p>The numbers behind the mission</p>
+    </header>
 
-    <div class="article-container">
-        <div class="article-header">
-            <h1>Measuring Our Impact</h1>
-            <p>We believe that what gets measured gets done. Here's a look at the real-world impact of our collective efforts to create a more sustainable future.</p>
-        </div>
-        <div class="article-content">
-            <h2>Carbon Sequestration Metrics</h2>
-            <p>Every time you choose a sustainable product, you're casting a vote for a healthier planet. Together, we've already displaced over 5 million single-use plastic items and supported the growth of over 50,000 acres of sustainable bamboo forests. That's a huge impact, and we're just getting started.</p>
+    <section class="article-body">
+        <h2>Carbon Sequestration Metrics</h2>
+        <p>As of 2026, EcoMart has facilitated the displacement of over 5 million single-use plastic items. By promoting bamboo-based products, we have supported the growth of over 50,000 acres of sustainable bamboo forests, which sequester approximately 2 million tons of $CO_2$ annually. Impact isn't just a buzzword; it is a measurable metric of success.</p>
 
-            <h2>A Note from the Founders</h2>
-            <p>EcoMart was born from a simple idea: that business can be a force for good. As founders, we're committed to building a company that not only offers beautiful, sustainable products, but also gives back to the planet. That's why we're proud to partner with organizations that are working to clean up our oceans, reforest our planet, and bring clean energy to communities in need.</p>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-column">
-            <h3>About EcoMart</h3>
-            <p>EcoMart is dedicated to promoting sustainability by offering eco-friendly products that reduce environmental impact.</p>
-        </div>
-        <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Contact</h3>
-            <p>Email: luffysharma067@gmail.com</p>
-            <p>Phone: +977 982064879</p>
-            <p>Itahari, Nepal</p>
-        </div>
-    </footer>
-    <script src="main.js"></script>
+        <h2>A Note from the Founders</h2>
+        <p><strong>Biraj Shrestha, Divyamani Khawas, Sanam Kurumbang, and Mik Limbu</strong> started EcoMart with a simple question: "Can we build a company that leaves the world better than we found it?" Our impact is driven by this collective vision. We don't just sell products; we fund ocean cleanup projects and reforestation initiatives. For every solar charger sold, a portion of the proceeds goes toward providing clean light to off-grid communities in the Himalayas and beyond.</p>
+    </section>
+</article>
 </body>
 </html>

@@ -3,16 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cart | EcoMart</title>
-    <link rel="stylesheet" href="base.css">
+    <title>Cart</title>
     <link rel="stylesheet" href="cart.css">
+    <!-- For Icons like account button or add to cart(shop) button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- internal css -->
+    <style>
+        body {
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+}
+    </style>
 </head>
 
 <body>
+    <!-- nav bar -->
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html"><img src="Images/EcomartLogo.jpg" alt="EcoMart Logo"></a>
+            <a href="index.html"><img src="Images/EcomartLogo.jpg" alt="EcoMart Logo" height="70"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -52,10 +60,8 @@
             const cart = (JSON.parse(localStorage.getItem('ecoCart')) || []).filter(i => i.title && !isNaN(i.price));
             const box = document.getElementById('cart-display');
             let total = 0;
-
             box.innerHTML = '<h2>Your Cart</h2>';
             if (cart.length === 0) box.innerHTML += "<p>Your cart is empty and waiting for vibrant items!</p>";
-
             cart.forEach((item, i) => {
                 total += item.price;
                 box.innerHTML += `

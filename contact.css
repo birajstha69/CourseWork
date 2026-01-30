@@ -1,3 +1,60 @@
+/*  Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    position: relative;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #acdf71;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.icon {
+    font-size: 20px;
+    color: #355E3B;
+    text-decoration: none;
+    position: relative;
+}
+
+.icon:hover {
+    color: #acdf71;
+}
 
 /* Contact Section - Contact */
 .contact-section {
@@ -77,4 +134,18 @@
 
 .contact-form button:hover {
     background: #256a2a;
+}
+/* for copyright footer*/
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+.page-wrapper {
+    min-height: calc(100vh - 50px); /* footer height */
 }

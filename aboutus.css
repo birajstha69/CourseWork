@@ -1,3 +1,44 @@
+/*  Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #acdf71;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+.search-box {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
 /* Variables - About Us */
 :root {
   --primary-color: #a78bfa;
@@ -205,9 +246,7 @@ header p {
   font-size: 14px;
 }
 
-/* =========================================
-   PORTFOLIO MODAL STYLES (New Addition)
-   ========================================= */
+/* portfolio style  */
 .portfolio-modal-overlay {
     display: none; /* Hidden by default */
     position: fixed;
@@ -303,4 +342,15 @@ header p {
 @keyframes slideUp {
     from {transform: translateY(50px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
+}
+/* for copyright footer*/
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
 }
